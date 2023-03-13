@@ -13,7 +13,11 @@ import { interval, map } from 'rxjs';
     <h3> CurrencyPipe </h3>
     <p>Le prix est : {{ price | currency: 'USD '}}</p>
     <h3> Decimal Pipe </h3>
-    <p> La valeur est : {{ value | number:'2.4 -4' }} </p>
+    <p> La valeur est : {{ value | number:'1.2-2' }} </p>
+
+    <h3> PercentPipe </h3>
+    <p>Le taux est : {{ rate | percent }}</p>
+
   `,
 })
 export class App {
@@ -22,6 +26,8 @@ export class App {
   price: string | number = 300 ;
 
   value: number | string = 7.70
+
+  rate: number = 27.7
 }
 
 bootstrapApplication(App);
