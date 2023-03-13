@@ -30,6 +30,10 @@ import { interval, map } from 'rxjs';
 
     <p *ngFor="let name of names | slice:0:5"> - {{name}} </p>
 
+    <h3> TitleCasePipe </h3>
+
+    <p> {{text | titlecase }}</p>
+
 
   `,
 })
@@ -51,7 +55,10 @@ export class App {
   }
 
 
-  names = ['John', 'Joe', 'Jonathan', 'Jarod']
+  names = ['John', 'Joe', 'Jonathan', 'Jarod', 'Allen', 'Ron', 'Robert', 'Mike']
+
+
+  text = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'
 
 
 
