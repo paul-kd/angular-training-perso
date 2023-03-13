@@ -2,7 +2,7 @@ import 'zone.js/dist/zone';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { interval, map } from 'rxjs';
+//import { interval, map } from 'rxjs';
 
 @Component({
   selector: 'my-app',
@@ -12,8 +12,8 @@ import { interval, map } from 'rxjs';
     <h1>Pipes</h1>
     <h3> CurrencyPipe </h3>
     <p>Le prix est : {{ price | currency: 'USD '}}</p>
-    <h3> Decimal Pipe </h3>
-    <p> La valeur est : {{ value | number:'1.2-2' }} </p>
+    <h3> DecimalPipe </h3>
+    <p> La valeur est : {{ value | number:'1.2-4' }} </p>
 
     <h3> PercentPipe </h3>
     <p>Le taux est : {{ rate | percent}}</p>
@@ -42,7 +42,7 @@ export class App {
 
   price: number = 300 ;
 
-  value: number  = 7.70
+  value: number  = 3.1415926535897
 
   rate: number = 21
 
