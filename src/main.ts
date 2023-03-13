@@ -16,18 +16,45 @@ import { interval, map } from 'rxjs';
     <p> La valeur est : {{ value | number:'1.2-2' }} </p>
 
     <h3> PercentPipe </h3>
-    <p>Le taux est : {{ rate | percent }}</p>
+    <p>Le taux est : {{ rate | percent}}</p>
+
+    <h3> KeyValuePipe</h3>
+
+    <ul>
+      <li *ngFor="let item of User | keyvalue">
+        {{item.key}}: {{item.value}}
+      </li>
+    </ul>
+
+    <h3> SlicePipe </h3>
+
+    <p *ngFor="let name of names | slice:0:5"> - {{name}} </p>
+
 
   `,
 })
 export class App {
   name = 'Angular';
 
-  price: string | number = 300 ;
+  price: number = 300 ;
 
-  value: number | string = 7.70
+  value: number  = 7.70
 
-  rate: number = 27.7
+  rate: number = 21
+
+
+
+  User = {
+    name: 'John Doe',
+    age: 17,
+    address: 'Le Cap'
+  }
+
+
+  names = ['John', 'Joe', 'Jonathan', 'Jarod']
+
+
+
 }
 
 bootstrapApplication(App);
